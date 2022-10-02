@@ -3,18 +3,18 @@ public class ArrayQueueImplementation<E> implements Queue<E> {
     E[] v;
     int maximum;
     public ArrayQueueImplementation(int len){
-
         this.p=0;
         this.maximum=len;
         this.v = (E[]) new Object[len];
     }
     @Override
     public void push(E e) throws FullQueueException {
-        if(isFull())
+        if(isFull()){
             throw new FullQueueException();
+        }
+
         v[p]=e;
         p++;
-
     }
 
     private boolean isFull() {
@@ -23,18 +23,20 @@ public class ArrayQueueImplementation<E> implements Queue<E> {
 
     @Override
     public E pop() throws EmptyQueueException {
-        if(isEmpty())
+        if(isEmpty()){
             throw new EmptyQueueException();
+        }
+
         E elementToPop= v[0];
-        rearrange(v);
-        p--;
+        rearrange();
         return elementToPop;
     }
 
-    private void rearrange(E[] v) {
-        for (int i=0; i<v.length-1;i++) {
-            v[i] = v[i++];
+    private void rearrange() {
+        for (int i=0; i<this.p-1;i++) {
+            this.v[i] = this.v[i+1];
         }
+        this.p--;
     }
 
     private boolean isEmpty() {
