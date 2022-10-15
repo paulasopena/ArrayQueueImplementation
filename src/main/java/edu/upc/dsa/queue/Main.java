@@ -1,3 +1,7 @@
+package edu.upc.dsa.queue;
+
+import edu.upc.dsa.queue.FullQueueException;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -42,7 +46,7 @@ public class Main {
             System.out.println("EXCEPCIÓ!!");
             fullExp.printStackTrace();
         }
-        /*catch (EmptyQueueException empty) {
+        /*catch (edu.upc.dsa.queue.EmptyQueueException empty) {
             System.out.println("EXCEPCIÓ!!");
             empty.printStackTrace();
         }*/

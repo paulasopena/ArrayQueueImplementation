@@ -1,1 +1,8 @@
+edu\upc\dsa\queue\Queue.class
+edu\upc\dsa\queue\EmptyQueueException.class
 org\example\Main.class
+edu\upc\dsa\queue\Main.class
+edu\upc\dsa\queue\QueueImplementation.class
+edu\upc\dsa\queue\ArrayQueueImplementation.class
+edu\upc\dsa\queue\FullQueueException.class
+edu\upc\dsa\queue\QueueImplementation$QueueNode.class

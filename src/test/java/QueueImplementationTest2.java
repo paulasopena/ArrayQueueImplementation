@@ -1,8 +1,11 @@
-import junit.framework.TestCase;
-import org.junit.jupiter.api.Test;
+import edu.upc.dsa.queue.ArrayQueueImplementation;
+import edu.upc.dsa.queue.EmptyQueueException;
+import edu.upc.dsa.queue.FullQueueException;
+import edu.upc.dsa.queue.Queue;
+import org.junit.Test;
 import org.junit.Assert;
 
-class QueueImplementationTest2 extends TestCase {
+public class QueueImplementationTest2 {
     @Test
     public void size_of_queue_correctly_calculated() throws FullQueueException {
 
@@ -10,7 +13,7 @@ class QueueImplementationTest2 extends TestCase {
         queue.push(1);
         queue.push(5);
         queue.push(3);
-        assertEquals(3, queue.size());
+        Assert.assertEquals(3, queue.size());
     }
 
     @Test
@@ -24,7 +27,7 @@ class QueueImplementationTest2 extends TestCase {
     public void push_to_add_queue_element() throws FullQueueException {
         Queue<Integer> queue = new ArrayQueueImplementation<Integer>(4);
         queue.push(2);
-        assertEquals(1, queue.size());
+        Assert.assertEquals(1, queue.size());
     }
 
     @Test
@@ -37,9 +40,9 @@ class QueueImplementationTest2 extends TestCase {
         int beforeSize = queue.size();
         int elementPopped = queue.pop();
         int afterSize = queue.size();
-        assertEquals(2, beforeSize);
-        assertEquals(1, afterSize);
-        assertEquals(elementPopped, firstElement);
+        Assert.assertEquals(2, beforeSize);
+        Assert.assertEquals(1, afterSize);
+        Assert.assertEquals(elementPopped, firstElement);
     }
     @Test
     public void fullQueue() throws FullQueueException {
@@ -49,6 +52,5 @@ class QueueImplementationTest2 extends TestCase {
         queue.push(5);
         queue.push(7);
         Assert.assertThrows(FullQueueException.class,()-> queue.push(4));
-
     }
 }

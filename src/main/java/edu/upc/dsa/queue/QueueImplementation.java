@@ -1,3 +1,8 @@
+package edu.upc.dsa.queue;
+
+import edu.upc.dsa.queue.EmptyQueueException;
+import edu.upc.dsa.queue.FullQueueException;
+
 public class QueueImplementation<E> implements Queue<E> {
     private static class QueueNode<E>{
         private E obj;
@@ -23,7 +28,7 @@ public class QueueImplementation<E> implements Queue<E> {
     }
 
     public E pop() throws EmptyQueueException {
-        //Checking if the Queue is empty.
+        //Checking if the edu.upc.dsa.queue.Queue is empty.
         if (first==null){
             throw new EmptyQueueException();
         }

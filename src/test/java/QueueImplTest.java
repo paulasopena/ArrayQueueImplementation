@@ -1,3 +1,7 @@
+import edu.upc.dsa.queue.ArrayQueueImplementation;
+import edu.upc.dsa.queue.EmptyQueueException;
+import edu.upc.dsa.queue.FullQueueException;
+import edu.upc.dsa.queue.Queue;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;

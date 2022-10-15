@@ -1,3 +1,8 @@
+package edu.upc.dsa.queue;
+
+import edu.upc.dsa.queue.EmptyQueueException;
+import edu.upc.dsa.queue.FullQueueException;
+
 public interface Queue<E> {
     /**
      * Mètode que permet afegir/encuar un nou element a la cua

@@ -1,3 +1,5 @@
+package edu.upc.dsa.queue;
+
 public class ArrayQueueImplementation<E> implements Queue<E> {
     int p;
     E[] v;
